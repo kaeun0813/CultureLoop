@@ -1,0 +1,48 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environment
+.venv/
+env/
+venv/
+
+# Environment variables
+.env
+.env.*
+
+# VSCode settings
+.vscode/
+
+# macOS system files
+.DS_Store
+
+# Logs and debugging
+*.log
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# Docker
+*.pid
+*.pid.lock
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+*.manifest
+*.spec
+
+# Python cache
+.cache/
+
+# Firebase (optional)
+.firebase/
+
+# FastAPI auto-generated files (if any)
+*.db
+
+# OS-specific
+Thumbs.db
