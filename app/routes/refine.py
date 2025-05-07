@@ -1,16 +1,22 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
-from app.services.challenge_refiner import refine_description
+from app.services.challenge_refiner import refine_challenge
 
 router = APIRouter()
 
 class RefineRequest(BaseModel):
-    raw_text: str
+    title: str
+    description: str
+    city: str
 
 @router.post("/")
-def refine_challenge(request: RefineRequest):
+def refine_challenge_route(request: RefineRequest):
     try:
-        refined = refine_description(request.raw_text)
-        return {"refined_text": refined}
+        result = refine_challenge(
+            title=request.title,
+            description=request.description,
+            city=request.city
+        )
+        return result
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"An error occurred: {str(e)}")
+        raise HTTPException(status_code=500, detail=str(e))
