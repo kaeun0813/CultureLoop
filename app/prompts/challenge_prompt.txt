@@ -17,6 +17,7 @@ Return the output as a JSON array:
 [
   {{
     "title": "...",
+    "city": "{city}",
     "location": "...",
     "duration": "...",
     "checklist": ["...", "...", "..."]
