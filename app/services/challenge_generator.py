@@ -33,7 +33,7 @@ def generate_challenges(city: str, style: str, date: str, count: int = 5):
     for c in challenges:
         title = c.get("title", "")
         location = c.get("location", "")
-        c["culture_background"] = search_cultural_background(city, title, location)
+        c["cultural_background"] = search_cultural_background(city, title, location)
         c["image_url"] = search_image_url(title, location, city)
 
     return challenges
